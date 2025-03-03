@@ -1,0 +1,18 @@
+{
+    "data_root_dir" : "data",
+    "search_service_name": "klausearch",
+    "search_admin_key" : "ZD92faIImUrh0CM6sqYfJvZYZfVL1zzXLkOKBsW8KwAzSeCo2rQ4",
+    "search_index_name": "",
+    "search_index_schema_file": "schema.json",
+    "search_api_version" : "2023-10-01-Preview",  
+    "blob_service_name" : "klaustorage",
+    "blob_container" : "",
+    "blob_key" : "pxaFVKLlMmmWi/7OyoBNoBiGrEwDQ4jPbkHyqH9htn6TSPN63jSxEZU3IKh4zg8pjS8X4U3G7ubh+ASt7QaHaQ==",
+    "openai_api_base" : "https://klauopenai.openai.azure.com/",
+    "openai_api_key" : "CxgvkSkBGIc66VaFbT2J61jepF33ZeopC3oT1b8Y0ycgX1AS73XiJQQJ99AJACYeBjFXJ3w3AAABACOGti5c",
+    "openai_api_version" :  "2024-08-01-preview",
+    "openai_embedding_model" : "text-embedding-3-small" ,
+    "openai_gpt_model" : "gpt-4o" ,
+    "doc_intelligence_endpoint" : "https://klau-docintel.cognitiveservices.azure.com/",
+    "doc_intelligence_apim_key" : "FoC0DT6cpqE3iNBKFhjQKcNbuphiU48UvNNmnl7uFU0blN5UpRZ4JQQJ99AJACYeBjFXJ3w3AAALACOG4erw"
+}
