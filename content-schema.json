@@ -1,0 +1,86 @@
+{
+    "document": {
+        "general_document_extraction": {
+            "name": "General document extraction",
+            "description": "Extracts general information from the document.",
+            "scenario": "document",
+            "config": {
+                "returnDetails": true
+            },
+            "fieldSchema": {
+                "name": "DocumentSummarizer",
+                "descriptions": "Extract summary and key information from a document",
+                "fields": {
+                    "DocumentTitle": {
+                        "type": "string",
+                        "method": "extract",
+                        "description": "Title of the Document"
+                    },
+                    "AuthorCompany": {
+                        "type": "string",
+                        "method": "extract",
+                        "description": "Name of the company that authored the document."
+                    },
+                    "DocumentDate": {
+                        "type": "string",
+                        "method": "extract",
+                        "description": "Date that the document was created or published."
+                    }
+                }
+            }
+        },
+        "isda_document": {
+            "name": "Collateral data extraction",
+            "description": "Extracts detailed information from a collateral agreement",
+            "scenario": "document",
+            "config": {
+                "returnDetails": true
+            },
+            "fieldSchema": {
+                "name": "CollateralExtraction",
+                "descriptions": "Extracted fields and content from a collateral agreement",
+                "fields": {
+                    "PartyA": {
+                        "type": "string",
+                        "method": "extract",
+                        "description": "Fund (Party A) of document"
+                    },
+                    "Party B": {
+                        "type": "string",
+                        "method": "extract",
+                        "description": "Counterparty (Party B) of document"
+                    },
+                    "Collateral": {
+                        "type": "array",
+                        "method": "extract",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "Asset Name": {
+                                    "type": "string",
+                                    "method": "extract",
+                                    "description": "Collateral Type"
+                                },
+                                "Tenure_Min": {
+                                    "type": "number",
+                                    "method": "extract",
+                                    "description": "Minimum number of years to maturity"
+                                },
+                                "Tenure_Max": {
+                                    "type": "number",
+                                    "method": "extract",
+                                    "description": "Maximum number of years to maturity"
+                                },
+                                "Haircut_Percentage": {
+                                    "type": "number",
+                                    "method": "extract",
+                                    "description": "Amount of (100 - Valuation Percentage)"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
